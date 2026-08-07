@@ -154,20 +154,49 @@ automatically — for example, if you empty `data/talks.yaml`, the Presentations
 too. Adding a genuinely new kind of section means editing that template, which is worth asking for
 help with.
 
-## Point a custom domain at the site
+## The custom domain
 
-If you buy a domain (say `rahulsinghchauhan.com`):
+The site is configured to serve from **rahulschauhan.com**. Two files hold that:
 
-1. Create a file named `static/CNAME` containing just the domain, with no `http://` and no
-   trailing slash.
-2. In `hugo.yaml`, change `baseURL` to `https://rahulsinghchauhan.com/`.
-3. At your domain registrar, add four `A` records for the apex domain pointing to `185.199.108.153`,
-   `185.199.109.153`, `185.199.110.153`, and `185.199.111.153`, plus a `CNAME` record for `www`
-   pointing to `rksc1997.github.io`.
-4. In the repository, go to **Settings → Pages**, enter the domain under "Custom domain", and tick
-   **Enforce HTTPS** once the certificate is issued.
+- `static/CNAME` — contains just `rahulschauhan.com`. GitHub Pages reads this on every deploy.
+  **Don't delete it**, or the domain stops working on the next push.
+- `hugo.yaml` — the `baseURL` line at the top.
 
-`rksc1997.github.io` keeps working afterwards — it redirects to the new domain.
+To change the domain later, edit both, then update **Settings → Pages → Custom domain** in the
+repository.
+
+### DNS records this expects
+
+At your registrar, on `rahulschauhan.com`:
+
+| Type | Name | Value |
+|---|---|---|
+| A | `@` | `185.199.108.153` |
+| A | `@` | `185.199.109.153` |
+| A | `@` | `185.199.110.153` |
+| A | `@` | `185.199.111.153` |
+| CNAME | `www` | `rksc1997.github.io` |
+
+Optionally add IPv6, which some university networks prefer:
+
+| Type | Name | Value |
+|---|---|---|
+| AAAA | `@` | `2606:50c0:8000::153` |
+| AAAA | `@` | `2606:50c0:8001::153` |
+| AAAA | `@` | `2606:50c0:8002::153` |
+| AAAA | `@` | `2606:50c0:8003::153` |
+
+If your DNS is at Cloudflare, leave every record **DNS-only (grey cloud)**. Proxying through
+Cloudflare (orange cloud) prevents GitHub from issuing the HTTPS certificate.
+
+`rksc1997.github.io` keeps working after the domain is live — it redirects to `rahulschauhan.com`,
+so older links stay good.
+
+### If the site ever goes down after a domain change
+
+Check, in order: the `static/CNAME` file still contains the right domain; **Settings → Pages** still
+shows it under "Custom domain" with a green check; and the A records above are still present at the
+registrar. Also make sure the domain hasn't quietly expired — turn on auto-renew.
 
 ---
 

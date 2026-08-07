@@ -1,6 +1,10 @@
-# rksc1997.github.io
+# rahulschauhan.com
 
-Source for the personal academic website of Rahul Singh Chauhan — <https://rksc1997.github.io>
+Source for the personal academic website of Rahul Singh Chauhan — <https://rahulschauhan.com>
+
+Served by GitHub Pages from this repository (`rksc1997.github.io`), with `rahulschauhan.com` as the
+custom domain. `static/CNAME` is what tells Pages about the domain on each deploy — see
+[UPDATING.md](UPDATING.md) for the DNS records it expects.
 
 Built with [Hugo](https://gohugo.io) (extended) using custom layouts, no external theme. Pushing
 to `main` triggers `.github/workflows/deploy.yml`, which builds the site and publishes it to
@@ -25,6 +29,7 @@ assets/css/style.css         all styling
 static/files/                cv.pdf and paper PDFs
 static/images/photo.jpg      headshot
 static/favicon*              favicons
+static/CNAME                 the custom domain, read by GitHub Pages on deploy
 ```
 
 Sections with no data are omitted from the page automatically.

@@ -30,14 +30,16 @@ jobs:
           sudo dpkg -i ${{ runner.temp }}/hugo.deb
 
       - name: Setup Pages
-        id: pages
         uses: actions/configure-pages@v5
 
+      # baseURL comes from hugo.yaml (https://rahulschauhan.com/) rather than the
+      # runner, so canonical, Open Graph, and JSON-LD URLs always name the custom
+      # domain. static/CNAME is what points Pages at that domain.
       - name: Build with Hugo
         env:
           HUGO_ENVIRONMENT: production
           TZ: America/Chicago
-        run: hugo --gc --minify --baseURL "${{ steps.pages.outputs.base_url }}/"
+        run: hugo --gc --minify
 
       - uses: actions/upload-pages-artifact@v3
         with:
