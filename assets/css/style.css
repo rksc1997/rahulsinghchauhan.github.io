@@ -285,12 +285,48 @@ main { padding-bottom: 3rem; }
 .paper-meta { margin: 0; }
 
 .paper-description,
-.paper-abstract {
+.abstract-body {
   margin: 0.5rem 0 0;
   font-size: 0.9375rem;
   line-height: 1.6;
 }
 .paper-description { color: var(--color-text-muted); }
+
+/* collapsible abstract — native <details>, no JavaScript */
+
+.abstract { margin: 0.6rem 0 0; }
+
+.abstract > summary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  cursor: pointer;
+  width: fit-content;
+  padding: 0.1rem 0;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-accent);
+  list-style: none;
+}
+.abstract > summary::-webkit-details-marker { display: none; }
+.abstract > summary::marker { content: ""; }
+
+.abstract > summary::before {
+  content: "";
+  flex: 0 0 auto;
+  width: 0;
+  height: 0;
+  border-left: 4.5px solid currentColor;
+  border-top: 3.5px solid transparent;
+  border-bottom: 3.5px solid transparent;
+  transition: transform 0.15s ease;
+}
+.abstract[open] > summary::before { transform: rotate(90deg); }
+
+.abstract > summary:hover,
+.abstract > summary:focus-visible { color: var(--color-accent-hover); }
 
 .paper-note,
 .paper-coverage { margin: 0.5rem 0 0; }
@@ -310,6 +346,9 @@ main { padding-bottom: 3rem; }
 .paper-featured .paper-title { font-size: 1.0625rem; font-weight: 600; }
 .paper-featured .paper-title a { font-weight: 600; }
 .paper-featured .badge { background: #e6dfd5; }
+.paper-featured .abstract > summary { color: var(--color-text-muted); }
+.paper-featured .abstract > summary:hover,
+.paper-featured .abstract > summary:focus-visible { color: var(--color-accent); }
 
 /* ---------------------------------------------------------------- teaching */
 

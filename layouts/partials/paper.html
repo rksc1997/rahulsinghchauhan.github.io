@@ -20,10 +20,14 @@
   {{- with $meta }}
   <p class="paper-meta meta">{{ delimit . " · " }}</p>
   {{- end }}
-  {{- if .featured }}
-    {{- with .abstract }}<p class="paper-abstract">{{ . }}</p>{{ end }}
-  {{- else }}
-    {{- with .description }}<p class="paper-description">{{ . }}</p>{{ end }}
+  {{- with .description }}<p class="paper-description">{{ . }}</p>{{ end }}
+  {{- with .abstract }}
+  {{/* Native <details> so the toggle works without JavaScript and stays keyboard
+       accessible. The featured paper opens by default; the rest start collapsed. */}}
+  <details class="abstract"{{ if $.featured }} open{{ end }}>
+    <summary>Abstract</summary>
+    <p class="abstract-body">{{ . }}</p>
+  </details>
   {{- end }}
   {{- with .note }}<p class="paper-note meta">{{ . }}</p>{{ end }}
   {{- with .coverage }}<p class="paper-coverage meta">Coverage: {{ . }}</p>{{ end }}
