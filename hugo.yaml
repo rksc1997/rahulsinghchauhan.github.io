@@ -18,7 +18,6 @@ params:
   photoAlt: "Rahul Singh Chauhan"
   cv: "files/cv.pdf"
   description: "Rahul Singh Chauhan is a fourth-year PhD student in Financial Economics at the University of Chicago Booth School of Business. He studies banking, public finance, and corporate finance."
-  tagline: "I am interested in financial intermediation, corporate finance and public finance."
   interests:
     - "Banking and financial intermediation"
     - "Public finance"
