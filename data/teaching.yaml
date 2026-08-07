@@ -1,0 +1,32 @@
+# Teaching history, grouped on the page by institution in the order below.
+# Fields: course, role, institution, instructor (optional), term (optional).
+
+- course: "Investments (MBA)"
+  role: "Teaching Assistant"
+  institution: "University of Chicago Booth School of Business"
+  instructor: "Michael Weber"
+
+- course: "Investments (Executive MBA)"
+  role: "Teaching Assistant"
+  institution: "University of Chicago Booth School of Business"
+  instructor: "John Heaton"
+
+- course: "Corporation Finance (Undergraduate and MBA)"
+  role: "Teaching Assistant"
+  institution: "University of Chicago Booth School of Business"
+  instructor: "Pascal Noel"
+
+- course: "Analytical Methods (MiM and Executive MBA)"
+  role: "Teaching Assistant"
+  institution: "University of Chicago Booth School of Business"
+  instructor: "Kathleen Fitzgerald"
+
+- course: "Advanced Macroeconomic Analysis"
+  role: "Teaching Assistant"
+  institution: "University of Chicago Booth School of Business"
+  instructor: "Harald Uhlig"
+
+- course: "Intermediate Macroeconomics (Undergraduate and Postgraduate)"
+  role: "Teaching Assistant"
+  institution: "London School of Economics"
+  instructor: "Ricardo Reis and Kevin Sheedy"

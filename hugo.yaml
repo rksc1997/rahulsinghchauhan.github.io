@@ -1,0 +1,53 @@
+baseURL: "https://rksc1997.github.io/"
+title: "Rahul Singh Chauhan"
+locale: en-US
+enableRobotsTXT: true
+
+# No blog or tagged content, so there is nothing for taxonomy pages to list.
+disableKinds: ["taxonomy", "term"]
+
+params:
+  author: "Rahul Singh Chauhan"
+  role: "PhD Student in Financial Economics"
+  program: "Joint Program in Financial Economics"
+  institution: "University of Chicago Booth School of Business"
+  institutionShort: "University of Chicago"
+  yearInProgram: "Fourth-year PhD student"
+  email: "rahulchauhan@chicagobooth.edu"
+  photo: "images/photo.jpg"
+  photoAlt: "Rahul Singh Chauhan"
+  cv: "files/cv.pdf"
+  description: "Rahul Singh Chauhan is a fourth-year PhD student in Financial Economics at the University of Chicago Booth School of Business. He studies banking, public finance, and corporate finance."
+  tagline: "I am interested in financial intermediation, corporate finance and public finance."
+  interests:
+    - "Banking and financial intermediation"
+    - "Public finance"
+    - "Corporate finance"
+  # Set credit to false to remove the footer credit line.
+  # Set discovery to false to remove the invisible generator tag and JSON-LD block.
+  mysite:
+    credit: true
+    discovery: true
+
+menu:
+  main:
+    - name: Research
+      url: "/#research"
+      weight: 10
+    - name: Teaching
+      url: "/#teaching"
+      weight: 20
+    - name: CV
+      url: "/files/cv.pdf"
+      weight: 30
+    - name: Contact
+      url: "/#contact"
+      weight: 40
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+
+build:
+  writeStats: false

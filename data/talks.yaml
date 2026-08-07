@@ -1,0 +1,16 @@
+# Seminars and conferences, grouped by paper. Fields: paper, venues (list).
+# Scheduled and past presentations are listed together.
+
+- paper: "Risk on the Run: Public Pensions, Migration Risk and the Pivot to Alternatives"
+  venues:
+    - "Chicago Booth"
+    - "Federal Reserve Bank of Chicago"
+    - "SGF Conference 2026"
+    - "North American Summer Meetings of the Econometric Society 2026"
+    - "SoFiE Conference 2026"
+    - "Brookings Municipal Finance Conference 2026"
+    - "SFA 2026"
+
+- paper: "Cashing-in or Selling-out: Impact of Electoral Bonds on Corporate India"
+  venues:
+    - "ISI Delhi Winter Conference 2024"

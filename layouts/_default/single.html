@@ -1,0 +1,10 @@
+{{ define "main" }}
+<article class="wrap page">
+  <h1>{{ .Title }}</h1>
+  {{ with .Params.date }}<p class="page-date">{{ time.Format "2 January 2006" . }}</p>{{ end }}
+  <div class="prose">
+    {{ .Content }}
+  </div>
+  <p class="page-back"><a href="{{ "/" | relURL }}">← Back to homepage</a></p>
+</article>
+{{ end }}

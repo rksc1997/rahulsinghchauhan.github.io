@@ -1,0 +1,35 @@
+{{- /* Renders one entry from data/papers.yaml. Context is the entry itself. */ -}}
+{{- $href := "" -}}
+{{- $external := false -}}
+{{- if .pdf }}{{ $href = .pdf | relURL }}{{ else if .link }}{{ $href = .link }}{{ $external = true }}{{ end -}}
+{{- $badge := "" -}}
+{{- if ne .status "published" }}{{ $badge = .status }}{{ end -}}
+<div class="paper{{ if .featured }} paper-featured{{ end }}">
+  <h4 class="paper-title">
+    {{- if $href -}}
+    <a href="{{ $href }}"{{ if $external }} target="_blank" rel="noopener"{{ end }}>{{ .title }}</a>
+    {{- else -}}
+    {{ .title }}
+    {{- end }}
+    {{- with $badge }}<span class="badge">{{ . }}</span>{{ end }}
+  </h4>
+  {{- $meta := slice }}
+  {{- with .coauthors }}{{ $meta = $meta | append (printf "with %s" .) }}{{ end }}
+  {{- with .venue }}{{ $meta = $meta | append . }}{{ end }}
+  {{- with .year }}{{ $meta = $meta | append (printf "%v" .) }}{{ end }}
+  {{- with $meta }}
+  <p class="paper-meta meta">{{ delimit . " · " }}</p>
+  {{- end }}
+  {{- if .featured }}
+    {{- with .abstract }}<p class="paper-abstract">{{ . }}</p>{{ end }}
+  {{- else }}
+    {{- with .description }}<p class="paper-description">{{ . }}</p>{{ end }}
+  {{- end }}
+  {{- with .note }}<p class="paper-note meta">{{ . }}</p>{{ end }}
+  {{- with .coverage }}<p class="paper-coverage meta">Coverage: {{ . }}</p>{{ end }}
+  {{- with .extraLinks }}
+  <p class="paper-links">
+    {{- range . }}<a href="{{ .url }}" target="_blank" rel="noopener">{{ .label }}</a>{{ end }}
+  </p>
+  {{- end }}
+</div>

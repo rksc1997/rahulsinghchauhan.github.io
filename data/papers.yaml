@@ -1,0 +1,83 @@
+# Each entry below becomes one item in the Research section of the homepage.
+#
+# Fields:
+#   title       required
+#   coauthors   optional string, rendered as "with ..." (omit for solo work)
+#   year        optional
+#   status      one of: published | accepted | revise and resubmit |
+#               under review | working paper | work in progress
+#   venue       journal / series name (published or working-paper series)
+#   pdf         path to a file in static/files/ (the title links to this)
+#   link        external URL, used if there is no local pdf
+#   extraLinks  optional list of {label, url} shown after the title
+#   abstract    shown in full ONLY when featured: true
+#   description one-line summary, shown for non-featured items
+#   note        short factual note, e.g. an award attached to the paper
+#   coverage    media coverage, rendered as "Coverage: ..."
+#   featured    true for the paper that should sit in the highlighted card
+#
+# Order within each status group follows the order of this file.
+
+- title: "Risk on the Run: Public Pensions, Migration Risk and the Pivot to Alternatives"
+  year: 2026
+  status: "working paper"
+  featured: true
+  pdf: "files/risk-on-the-run.pdf"
+  note: "Liew–Fama Miller Fellowship for best second-year paper"
+  abstract: >-
+    How does local debt stay sustainable when the tax base is mobile? Exploiting plausibly
+    exogenous variation in funding gaps driven by relative portfolio performance, I find that
+    widening pension deficits significantly increase net out-migration of households and income
+    flows from underfunded to better-funded states. This mobility erodes the tax base, raising the
+    effective cost of funding pensions and constraining governments' ability to close shortfalls
+    through higher contributions. States facing higher migration risk — those that face larger
+    out-migration when local taxes rise — systematically under-contribute relative to actuarially
+    required levels and shift pension assets toward opaque, higher-yielding alternatives such as
+    private equity and hedge funds. To interpret these findings, I develop a spatial model of
+    tax-setting and pension investment under endogenous migration. The model highlights a
+    migration–funding–risk feedback loop: governments that fail to internalize out-migration
+    overestimate tax capacity, under-contribute, and induce fiduciaries to pursue riskier portfolios.
+
+- title: "Liquidity Dependence and the Waxing and Waning of Central Bank Balance Sheets"
+  coauthors: "Viral V. Acharya, Raghuram G. Rajan, and Sascha Steffen"
+  year: 2024
+  status: "working paper"
+  venue: "NBER Working Paper 31050"
+  pdf: "files/liquidity-dependence.pdf"
+  extraLinks:
+    - label: "NBER"
+      url: "https://www.nber.org/papers/w31050"
+  description: >-
+    When the Federal Reserve expands its balance sheet through quantitative easing, banks finance
+    their reserve holdings with demandable deposits and issue lines of credit to corporations; these
+    claims on liquidity did not shrink when the Fed reversed course, leaving the financial sector
+    vulnerable to liquidity shocks.
+  coverage: "CEPR, Monetary Authority of Singapore, Bloomberg, Financial Times, The Telegraph"
+
+- title: "Non-Banks and Firm Dynamics"
+  status: "work in progress"
+  description: >-
+    Product scope predicts firm creditworthiness and helps explain creditor–firm sorting. Using a
+    bank regulatory reform and a large non-bank bankruptcy in India, I show that non-bank lenders
+    substitute for constrained bank credit unevenly, changing which firms receive credit and grow.
+
+- title: "Cashing-in or Selling-out: Impact of Electoral Bonds on Corporate India"
+  status: "work in progress"
+  description: >-
+    Anonymous political financing through electoral bonds is associated with more investment
+    announcements, higher capital expenditure and employment, lower measured productivity, and
+    greater dispersion in marginal products within industries.
+
+- title: "Liquidity Dependence: Why Shrinking Central Bank Balance Sheets is an Uphill Task"
+  coauthors: "Viral V. Acharya, Raghuram G. Rajan, and Sascha Steffen"
+  year: 2022
+  status: "published"
+  venue: "Jackson Hole Economic Policy Papers and Proceedings"
+  link: "https://www.kansascityfed.org/Jackson%20Hole/documents/9666/JH2022_Acharya.pdf"
+
+- title: "Understanding Sovereign Ratings and their Implications for Emerging Economies"
+  coauthors: "N. Kulkarni, G. Udupa, K. Kishore, K. Ravindranath, and I. Goenka"
+  year: 2023
+  status: "published"
+  venue: "Economic & Political Weekly"
+  link: "https://www.epw.in/journal/2023/22/money-banking-and-finance/understanding-sovereign-ratings-and-their.html"

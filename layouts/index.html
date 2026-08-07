@@ -1,0 +1,132 @@
+{{ define "main" }}
+{{- $papers := hugo.Data.papers -}}
+{{- $working := where $papers "status" "working paper" -}}
+{{- $wip := where $papers "status" "work in progress" -}}
+{{- $review := where $papers "status" "in" (slice "under review" "revise and resubmit" "accepted") -}}
+{{- $published := where $papers "status" "published" -}}
+
+{{/* ---------------------------------------------------------- hero */}}
+<section class="hero wrap" id="about">
+  <div class="hero-photo">
+    {{- with site.Params.photo }}
+    <img src="{{ . | relURL }}" alt="{{ site.Params.photoAlt | default site.Params.author }}" width="320" height="320">
+    {{- end }}
+  </div>
+  <div class="hero-text">
+    <h1>{{ site.Params.author }}</h1>
+    <p class="hero-role">{{ site.Params.yearInProgram }}, {{ site.Params.program }}<br>
+      {{ site.Params.institution }}</p>
+    <p class="hero-tagline">{{ site.Params.tagline }}</p>
+    <p class="hero-actions">
+      <a class="button" href="{{ site.Params.cv | relURL }}" target="_blank" rel="noopener">CV (PDF)</a>
+      <a class="hero-email" href="mailto:{{ site.Params.email }}">{{ site.Params.email }}</a>
+    </p>
+  </div>
+</section>
+
+{{/* ---------------------------------------------------------- bio */}}
+{{- with .Content }}
+<section class="section wrap" id="bio">
+  <div class="prose">{{ . }}</div>
+  {{- with site.Params.interests }}
+  <p class="interests"><span class="interests-label">Research interests</span>
+    {{ delimit . " · " }}</p>
+  {{- end }}
+</section>
+{{- end }}
+
+{{/* ---------------------------------------------------------- research */}}
+{{- if $papers }}
+<section class="section wrap" id="research">
+  <h2>Research</h2>
+
+  {{- if $working }}
+  <h3>Working papers</h3>
+  {{- range $working }}{{ partial "paper.html" . }}{{ end }}
+  {{- end }}
+
+  {{- if $review }}
+  <h3>Under review</h3>
+  {{- range $review }}{{ partial "paper.html" . }}{{ end }}
+  {{- end }}
+
+  {{- if $wip }}
+  <h3>Work in progress</h3>
+  {{- range $wip }}{{ partial "paper.html" . }}{{ end }}
+  {{- end }}
+
+  {{- if $published }}
+  <h3>Publications</h3>
+  {{- range $published }}{{ partial "paper.html" . }}{{ end }}
+  {{- end }}
+</section>
+{{- end }}
+
+{{/* ---------------------------------------------------------- teaching */}}
+{{- with hugo.Data.teaching }}
+<section class="section wrap" id="teaching">
+  <h2>Teaching</h2>
+  {{- $byInstitution := slice }}
+  {{- range . }}
+    {{- if not (in $byInstitution .institution) }}{{ $byInstitution = $byInstitution | append .institution }}{{ end }}
+  {{- end }}
+  {{- $all := . }}
+  {{- range $byInstitution }}
+  {{- $inst := . }}
+  <div class="teaching-group">
+    <h4 class="teaching-institution">{{ $inst }}</h4>
+    <ul class="teaching-list">
+      {{- range where $all "institution" $inst }}
+      <li>
+        <span class="teaching-course">{{ .course }}</span>
+        <span class="meta">
+          {{- with .role }}{{ . }}{{ end -}}
+          {{- with .instructor }} for {{ . }}{{ end -}}
+          {{- with .term }} · {{ . }}{{ end -}}
+        </span>
+      </li>
+      {{- end }}
+    </ul>
+  </div>
+  {{- end }}
+</section>
+{{- end }}
+
+{{/* ---------------------------------------------------------- awards */}}
+{{- with hugo.Data.awards }}
+<section class="section wrap" id="awards">
+  <h2>Fellowships, grants and awards</h2>
+  <ul class="awards-list">
+    {{- range . }}
+    <li>
+      <span class="award-name">{{ .name }}{{ with .note }} <span class="meta">({{ . }})</span>{{ end }}</span>
+      <span class="award-year meta">{{ .year }}</span>
+    </li>
+    {{- end }}
+  </ul>
+</section>
+{{- end }}
+
+{{/* ---------------------------------------------------------- talks */}}
+{{- with hugo.Data.talks }}
+<section class="section wrap" id="talks">
+  <h2>Presentations</h2>
+  {{- range . }}
+  <div class="talks-group">
+    <h4 class="talks-paper">{{ .paper }}</h4>
+    <p class="talks-venues">{{ delimit .venues "; " }}</p>
+  </div>
+  {{- end }}
+</section>
+{{- end }}
+
+{{/* ---------------------------------------------------------- contact */}}
+<section class="section wrap" id="contact">
+  <h2>Contact</h2>
+  <ul class="contact-list">
+    <li><span class="contact-label">Email</span> <a href="mailto:{{ site.Params.email }}">{{ site.Params.email }}</a></li>
+    <li><span class="contact-label">Affiliation</span> <span>{{ site.Params.institution }}</span></li>
+    <li><span class="contact-label">CV</span> <a href="{{ site.Params.cv | relURL }}" target="_blank" rel="noopener">Download (PDF)</a></li>
+  </ul>
+</section>
+{{ end }}
