@@ -60,16 +60,29 @@ file, so put new work wherever you want it to show.
   ```
 - `note:` — a short factual note, such as an award attached to the paper.
 - `coverage:` — media coverage, rendered as "Coverage: …".
-- `abstract:` — only shown for the featured paper (see below).
+- `abstract:` — the full abstract, tucked behind a dropdown (see below).
+
+## Abstracts
+
+Any paper with an `abstract:` field gets a small **ABSTRACT** toggle that readers click to expand.
+Papers without the field get no toggle. The `description:` line stays visible either way, so the
+list still scans quickly.
+
+By default every abstract starts collapsed. To have one already open when the page loads:
+
+```yaml
+  abstractOpen: true
+```
 
 ## Change which paper is highlighted
 
-Exactly one paper should have `featured: true`. That paper gets the highlighted card at the top of
-its group and is the only one that shows its full `abstract`. To move the highlight, delete
-`featured: true` from the old paper and add it to the new one.
+`featured: true` gives a paper the highlighted card — tinted background, maroon left edge — and
+opens its abstract automatically. Use it on at most one paper. To move the highlight, delete the
+line from the old paper and add it to the new one. Delete it everywhere and no paper is
+highlighted, which is a perfectly good look for a uniform list.
 
-When you go on the job market, this is also how you flag your job market paper — set
-`featured: true` on it and add `note: "Job market paper"`.
+When you go on the job market, this is how you flag your job market paper — set `featured: true`
+on it and add `note: "Job market paper"`.
 
 ## Mark a paper as published
 

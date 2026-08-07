@@ -10,13 +10,15 @@
 #   pdf         path to a file in static/files/ (the title links to this)
 #   link        external URL, used if there is no local pdf
 #   extraLinks  optional list of {label, url} shown after the title
-#   abstract    full abstract, placed behind an "Abstract" dropdown. The featured
-#               paper's dropdown starts open; every other one starts collapsed.
-#               Omit the field and no dropdown appears for that paper.
+#   abstract    full abstract, placed behind an "Abstract" dropdown. Omit the
+#               field and no dropdown appears for that paper.
+#   abstractOpen  true to have this paper's abstract already expanded on load.
+#               Independent of `featured` — you can have one without the other.
 #   description one-line summary, always visible above the dropdown
 #   note        short factual note, e.g. an award attached to the paper
 #   coverage    media coverage, rendered as "Coverage: ..."
 #   featured    true for the paper that should sit in the highlighted card
+#               (tinted background, maroon left edge). Implies abstractOpen.
 #
 # Order within each status group follows the order of this file.
 
