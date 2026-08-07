@@ -50,11 +50,6 @@
   extraLinks:
     - label: "NBER"
       url: "https://www.nber.org/papers/w31050"
-  description: >-
-    When the Federal Reserve expands its balance sheet through quantitative easing, banks finance
-    their reserve holdings with demandable deposits and issue lines of credit to corporations; these
-    claims on liquidity did not shrink when the Fed reversed course, leaving the financial sector
-    vulnerable to liquidity shocks.
   abstract: >-
     When the Federal Reserve (Fed) expanded its balance sheet via quantitative easing (QE),
     commercial banks typically financed reserve holdings with uninsured demandable deposits. They
@@ -68,10 +63,6 @@
 
 - title: "Non-Banks and Firm Dynamics"
   status: "work in progress"
-  description: >-
-    Product scope predicts firm creditworthiness and helps explain creditor–firm sorting. Using a
-    bank regulatory reform and a large non-bank bankruptcy in India, I show that non-bank lenders
-    substitute for constrained bank credit unevenly, changing which firms receive credit and grow.
   abstract: >-
     I show that product scope is an important predictor of firms' creditworthiness, even after
     residualizing for size and other firm characteristics, and helps explain creditor–firm sorting.
@@ -87,10 +78,6 @@
 
 - title: "Cashing-in or Selling-out: Impact of Electoral Bonds on Corporate India"
   status: "work in progress"
-  description: >-
-    Anonymous political financing through electoral bonds is associated with more investment
-    announcements, higher capital expenditure and employment, lower measured productivity, and
-    greater dispersion in marginal products within industries.
   abstract: >-
     I analyze the impact of anonymous political financing via electoral bonds on the Indian
     corporate sector. Political donors are more likely to announce investment projects in the year
