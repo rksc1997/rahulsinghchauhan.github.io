@@ -16,7 +16,9 @@
     <h1>{{ site.Params.author }}</h1>
     <p class="hero-role">{{ site.Params.yearInProgram }}, {{ site.Params.program }}<br>
       {{ site.Params.institution }}</p>
-    <p class="hero-tagline">{{ site.Params.tagline }}</p>
+    {{- with site.Params.tagline }}
+    <p class="hero-tagline">{{ . }}</p>
+    {{- end }}
     <p class="hero-actions">
       <a class="button" href="{{ site.Params.cv | relURL }}" target="_blank" rel="noopener">CV (PDF)</a>
       <a class="hero-email" href="mailto:{{ site.Params.email }}">{{ site.Params.email }}</a>
@@ -124,8 +126,8 @@
 <section class="section wrap" id="contact">
   <h2>Contact</h2>
   <ul class="contact-list">
+    {{/* Affiliation is deliberately not repeated here — the hero states it. */}}
     <li><span class="contact-label">Email</span> <a href="mailto:{{ site.Params.email }}">{{ site.Params.email }}</a></li>
-    <li><span class="contact-label">Affiliation</span> <span>{{ site.Params.institution }}</span></li>
     <li><span class="contact-label">CV</span> <a href="{{ site.Params.cv | relURL }}" target="_blank" rel="noopener">Download (PDF)</a></li>
   </ul>
 </section>

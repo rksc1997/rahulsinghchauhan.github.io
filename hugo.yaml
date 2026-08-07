@@ -18,6 +18,9 @@ params:
   photoAlt: "Rahul Singh Chauhan"
   cv: "files/cv.pdf"
   description: "Rahul Singh Chauhan is a fourth-year PhD student in Financial Economics at the University of Chicago Booth School of Business. He studies banking, public finance, and corporate finance."
+  # Research interests are stated once, in this list. There is deliberately no
+  # `tagline` param — the hero omits that line entirely when it's absent. Add
+  # tagline: "..." back here if you'd rather have a sentence under your name.
   interests:
     - "Banking and financial intermediation"
     - "Public finance"

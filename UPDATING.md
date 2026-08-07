@@ -102,8 +102,12 @@ These live in `hugo.yaml` under `params:`:
 - `tagline` — the sentence under your name
 - `yearInProgram` — e.g. change `Fourth-year PhD student` to `Fifth-year PhD student`
 - `email`, `institution`, `program`
-- `interests` — the "Research interests" line
 - `description` — the text search engines and link previews show
+
+Your research interests are stated once, in the `interests:` list, which renders as the "Research
+interests" line below your bio. There's no `tagline` param — the hero simply omits that line when
+it's absent. Add `tagline: "I am interested in …"` under `params:` if you'd rather have a sentence
+under your name; just don't state your interests in both places.
 
 ## Add a teaching entry
 
