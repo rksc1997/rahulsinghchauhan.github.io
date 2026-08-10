@@ -1,32 +1,37 @@
 # Teaching history, grouped on the page by institution in the order below.
 # Fields: course, role, institution, instructor (optional), term (optional).
 
-- course: "Investments (MBA)"
+- course: "Macroeconomics and the Global Environment (Executive MBA)"
+  role: "Teaching Assistant" 
+  institution: "University of Chicago Booth School of Business" 
+  instructors: "Prof. Randall Kroszner and Prof. Brent Neiman"
+  
+- course: "Introduction to Advanced Macroeconomic Analysis (Masters)"
+  role: "Teaching Assistant"
+  institution: "University of Chicago Booth School of Business" 
+  instructor: "Prof. Harald Uhlig"
+  
+- course: "Corporation Finance (Undergraduate and MBA)"
   role: "Teaching Assistant"
   institution: "University of Chicago Booth School of Business"
-  instructor: "Michael Weber"
+  instructor: "Prof. Pascal Noel"
 
 - course: "Investments (Executive MBA)"
   role: "Teaching Assistant"
   institution: "University of Chicago Booth School of Business"
-  instructor: "John Heaton"
-
-- course: "Corporation Finance (Undergraduate and MBA)"
+  instructor: "Prof. John Heaton"
+  
+- course: "Investments (MBA)"
   role: "Teaching Assistant"
   institution: "University of Chicago Booth School of Business"
-  instructor: "Pascal Noel"
+  instructor: "Prof. Michael Weber"
 
 - course: "Analytical Methods (MiM and Executive MBA)"
   role: "Teaching Assistant"
   institution: "University of Chicago Booth School of Business"
-  instructor: "Kathleen Fitzgerald"
-
-- course: "Advanced Macroeconomic Analysis"
-  role: "Teaching Assistant"
-  institution: "University of Chicago Booth School of Business"
-  instructor: "Harald Uhlig"
+  instructor: "Prof. Kathleen Fitzgerald"
 
 - course: "Intermediate Macroeconomics (Undergraduate and Postgraduate)"
   role: "Teaching Assistant"
   institution: "London School of Economics"
-  instructor: "Ricardo Reis and Kevin Sheedy"
+  instructors: "Prof. Ricardo Reis and Prof. Kevin Sheedy"
