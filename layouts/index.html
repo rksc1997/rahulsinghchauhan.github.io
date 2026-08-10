@@ -64,6 +64,32 @@
 </section>
 {{- end }}
 
+{{/* ---------------------------------------------------------- other writing */}}
+{{- with hugo.Data.writing }}
+<section class="section wrap" id="writing">
+  <h2>Other writing</h2>
+  {{- range . }}
+  <div class="paper writing">
+    <h4 class="paper-title">
+      {{- if .url -}}
+      <a href="{{ .url }}" target="_blank" rel="noopener">{{ .title }}</a>
+      {{- else -}}
+      {{ .title }}
+      {{- end }}
+    </h4>
+    {{- $meta := slice }}
+    {{- with .coauthors }}{{ $meta = $meta | append (printf "with %s" .) }}{{ end }}
+    {{- with .outlet }}{{ $meta = $meta | append . }}{{ end }}
+    {{- with .date }}{{ $meta = $meta | append (time.Format "2 January 2006" .) }}{{ end }}
+    {{- with $meta }}
+    <p class="paper-meta meta">{{ delimit . " · " }}</p>
+    {{- end }}
+    {{- with .note }}<p class="paper-note meta">{{ . }}</p>{{ end }}
+  </div>
+  {{- end }}
+</section>
+{{- end }}
+
 {{/* ---------------------------------------------------------- teaching */}}
 {{- with hugo.Data.teaching }}
 <section class="section wrap" id="teaching">

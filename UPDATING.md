@@ -109,6 +109,21 @@ interests" line below your bio. There's no `tagline` param — the hero simply o
 it's absent. Add `tagline: "I am interested in …"` under `params:` if you'd rather have a sentence
 under your name; just don't state your interests in both places.
 
+## Add a newspaper article or op-ed
+
+Edit `data/writing.yaml`. These appear in the "Other writing" section, newest first:
+
+```yaml
+- title: "The headline as published"
+  coauthors: "Raghuram Rajan and Rohit Lamba"   # omit if you're the sole author
+  outlet: "The Times of India"
+  date: 2027-03-15
+  url: "https://..."
+```
+
+Put new entries at the top — the page follows the order of the file, it doesn't sort by date. If
+you empty the file, the whole section and its nav link disappear.
+
 ## Add a teaching entry
 
 Edit `data/teaching.yaml`:

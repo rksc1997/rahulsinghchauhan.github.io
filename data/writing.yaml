@@ -1,0 +1,28 @@
+# Newspaper op-eds and other non-academic writing, shown in the "Other writing"
+# section. Newest first — the page keeps the order of this file.
+#
+# Fields:
+#   title      required. The headline as published.
+#   coauthors  optional string, rendered as "with ..."
+#   outlet     publication name
+#   date       YYYY-MM-DD, rendered as "3 January 2023"
+#   url        link to the article; the title links to it
+#   note       optional short factual note
+
+- title: "High growth, but do more"
+  coauthors: "Raghuram Rajan and Rohit Lamba"
+  outlet: "The Times of India"
+  date: 2023-01-03
+  url: "https://timesofindia.indiatimes.com/business/india-business/high-growth-but-do-more/articleshow/96716926.cms"
+
+- title: "The great jobs hunt"
+  coauthors: "Raghuram Rajan and Rohit Lamba"
+  outlet: "The Times of India"
+  date: 2022-12-06
+  url: "https://timesofindia.indiatimes.com/india/the-great-jobs-hunt/articleshow/96035338.cms"
+
+- title: "Making in India, but how?"
+  coauthors: "Raghuram Rajan"
+  outlet: "The Times of India"
+  date: 2022-09-11
+  url: "https://timesofindia.indiatimes.com/india/making-in-india-but-how/articleshow/94136282.cms"
