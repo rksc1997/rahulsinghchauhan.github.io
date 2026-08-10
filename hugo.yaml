@@ -31,9 +31,9 @@ params:
   # Add `display: "some text"` to an entry to override the visible link text.
   social:
     - label: "LinkedIn"
-      url: ""
+      url: "https://www.linkedin.com/in/rahul-singh-chauhan-141707110/"
     - label: "Google Scholar"
-      url: ""
+      url: "https://scholar.google.com/citations?hl=en&user=kNQWjSMAAAAJ"
 
   # Set credit to false to remove the footer credit line.
   # Set discovery to false to remove the invisible generator tag and JSON-LD block.
