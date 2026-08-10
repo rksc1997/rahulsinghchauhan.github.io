@@ -4,7 +4,7 @@
 - course: "Macroeconomics and the Global Environment (Executive MBA)"
   role: "Teaching Assistant" 
   institution: "University of Chicago Booth School of Business" 
-  instructors: "Prof. Randall Kroszner and Prof. Brent Neiman"
+  instructor: "Prof. Randall Kroszner and Prof. Brent Neiman"
   
 - course: "Introduction to Advanced Macroeconomic Analysis (Masters)"
   role: "Teaching Assistant"
@@ -34,4 +34,4 @@
 - course: "Intermediate Macroeconomics (Undergraduate and Postgraduate)"
   role: "Teaching Assistant"
   institution: "London School of Economics"
-  instructors: "Prof. Ricardo Reis and Prof. Kevin Sheedy"
+  instructor: "Prof. Ricardo Reis and Prof. Kevin Sheedy"
