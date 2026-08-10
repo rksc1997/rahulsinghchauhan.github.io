@@ -19,12 +19,22 @@ params:
   cv: "files/cv.pdf"
   description: "Rahul Singh Chauhan is a fourth-year PhD student in Financial Economics at the University of Chicago Booth School of Business. He studies banking, public finance, and corporate finance."
   # Research interests are stated once, in this list. There is deliberately no
-  # `tagline` param — the hero omits that line entirely when it's absent. Add
+  # `tagline` param - the hero omits that line entirely when it's absent. Add
   # tagline: "..." back here if you'd rather have a sentence under your name.
   interests:
     - "Banking and financial intermediation"
     - "Public finance"
     - "Corporate finance"
+
+  # Links shown in the Contact section, in this order. Paste a URL between the
+  # quotes to switch a row on; leave it empty and the row doesn't render at all.
+  # Add `display: "some text"` to an entry to override the visible link text.
+  social:
+    - label: "LinkedIn"
+      url: ""
+    - label: "Google Scholar"
+      url: ""
+
   # Set credit to false to remove the footer credit line.
   # Set discovery to false to remove the invisible generator tag and JSON-LD block.
   mysite:

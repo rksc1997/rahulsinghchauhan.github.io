@@ -154,6 +154,20 @@
   <ul class="contact-list">
     {{/* Affiliation is deliberately not repeated here — the hero states it. */}}
     <li><span class="contact-label">Email</span> <a href="mailto:{{ site.Params.email }}">{{ site.Params.email }}</a></li>
+    {{- /* Rows from params.social. Entries with an empty url are skipped, so a
+           placeholder in hugo.yaml never renders a broken link. */}}
+    {{- with site.Params.social }}
+      {{- range . }}
+        {{- $item := . }}
+        {{- with $item.url }}
+          {{- $text := $item.display }}
+          {{- if not $text }}
+            {{- $text = . | strings.TrimPrefix "https://" | strings.TrimPrefix "http://" | strings.TrimPrefix "www." | strings.TrimSuffix "/" }}
+          {{- end }}
+    <li><span class="contact-label">{{ $item.label }}</span> <a href="{{ . }}" target="_blank" rel="noopener">{{ $text }}</a></li>
+        {{- end }}
+      {{- end }}
+    {{- end }}
     <li><span class="contact-label">CV</span> <a href="{{ site.Params.cv | relURL }}" target="_blank" rel="noopener">Download (PDF)</a></li>
   </ul>
 </section>
