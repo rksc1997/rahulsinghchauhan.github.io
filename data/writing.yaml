@@ -8,7 +8,12 @@
 #   date       YYYY-MM-DD, rendered as "3 January 2023"
 #   url        link to the article; the title links to it
 #   note       optional short factual note
-
+- title: "the Great Reversal?"
+  coauthors: "Viral Acharya"
+  outlet: "The Indian Economy: Navigating a Global Turning Point"
+  date: 2026-08-27
+  url: "https://www.simonandschuster.com/books/The-Indian-Economy/Kaushik-Basu/9789390343607"
+  
 - title: "High growth, but do more"
   coauthors: "Raghuram Rajan and Rohit Lamba"
   outlet: "The Times of India"
@@ -26,3 +31,4 @@
   outlet: "The Times of India"
   date: 2022-09-11
   url: "https://timesofindia.indiatimes.com/india/making-in-india-but-how/articleshow/94136282.cms"
+
