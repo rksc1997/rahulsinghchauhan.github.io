@@ -26,6 +26,9 @@
   year: 2026
   status: "working paper"
   pdf: "files/risk-on-the-run.pdf"
+  extraLinks:
+    - label: "SSRN"
+      url: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5620870"
   note: "Liew–Fama Miller Fellowship for best second-year paper"
   abstract: >-
     How does local debt stay sustainable when the tax base is mobile? Exploiting plausibly
