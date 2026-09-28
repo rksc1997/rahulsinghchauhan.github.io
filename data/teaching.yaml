@@ -1,17 +1,17 @@
 # Teaching history, grouped on the page by institution in the order below.
 # Fields: course, role, institution, instructor (optional), term (optional).
 
-- course: "Macroeconomics and the Global Environment (Executive MBA)"
-  role: "Teaching Assistant" 
-  institution: "University of Chicago Booth School of Business" 
-  instructor: "Prof. Randall Kroszner and Prof. Brent Neiman"
-  term: "Autumn (2026)"
+# - course: "Macroeconomics and the Global Environment (Executive MBA)"
+#   role: "Teaching Assistant" 
+#   institution: "University of Chicago Booth School of Business" 
+#   instructor: "Prof. Randall Kroszner and Prof. Brent Neiman"
+#   term: "Autumn (2026)"
   
-- course: "Introduction to Advanced Macroeconomic Analysis (Masters)"
-  role: "Teaching Assistant"
-  institution: "University of Chicago Booth School of Business" 
-  instructor: "Prof. Harald Uhlig"
-  term: "Autumn (2026)"
+# - course: "Introduction to Advanced Macroeconomic Analysis (Masters)"
+#   role: "Teaching Assistant"
+#   institution: "University of Chicago Booth School of Business" 
+#   instructor: "Prof. Harald Uhlig"
+#   term: "Autumn (2026)"
   
 - course: "Corporation Finance (Undergraduate and MBA)"
   role: "Teaching Assistant"
